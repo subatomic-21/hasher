@@ -6,7 +6,6 @@ import click
 from pyfiglet import Figlet
 
 
-
 os.system('clear')
 
 f = Figlet(font='slant')
@@ -19,12 +18,6 @@ toHash = raw_input("Press enter to continue.")
 
 print(" \n")
 
-# toLog = int(raw_input("Would you like to enable logging? (Hasher will log hashes to an external file controlled on the local host machine.) [0] for yes [1] for no "))
-# print("\n")
-
-# if toLog == int(0):
-	# Log = open("hasherLog", "x")
-# if toLog == int(1):
 
 def main():
 
@@ -75,10 +68,6 @@ def main():
 		return main()
 	elif again == ("y"):
 		return main()
-
-
-
-
 
 
 
