@@ -1,0 +1,2 @@
+# hasher
+CLI hash calculator
