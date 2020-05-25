@@ -3,19 +3,14 @@ import os
 from colorama import Fore, Back, Style
 from time import sleep
 import click
+from pyfiglet import Figlet
 
 
 
 os.system('clear')
 
-
-
-# Hasher is a CLI app for hashing strings in various algorithms
-# Display title bar
-print("******************************")
-print("***         HASHER         ***")
-print("******************************")
-
+f = Figlet(font='slant')
+print f.renderText('Hasher')
 
 
 print(" \n")
@@ -30,6 +25,7 @@ print(" \n")
 # if toLog == int(0):
 	# Log = open("hasherLog", "x")
 # if toLog == int(1):
+
 def main():
 
 	print("\n")
