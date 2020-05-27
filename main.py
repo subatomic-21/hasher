@@ -1,5 +1,3 @@
-
-
 import hashlib
 import os
 from colorama import Fore, Back, Style
@@ -8,13 +6,7 @@ import click
 from pyfiglet import Figlet
 
 
-
 os.system('clear')
-
-
-
-
-
 
 
 # toLog = int(raw_input("Would you like to enable logging? (Hasher will log hashes to a file controlled on local host machine.) [0] for yes [1] for no "))
