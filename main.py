@@ -10,12 +10,12 @@ from pyfiglet import Figlet
 os.system('clear')
 
 
-# toLog = int(raw_input("Would you like to enable logging? (Hasher will log hashes to a file controlled on local host machine.) [0] for yes [1] for no "))
-# print("\n")
+toLog = int(raw_input("Would you like to enable logging? (Hasher will log hashes to a file controlled on local host machine.) [0] for yes [1] for no "))
+print("\n")
 
-# if toLog == int(0):
-	# Log = open("hasherLog", "x")
-# if toLog == int(1):
+if toLog == int(0):
+	Log = open("hasherLog", "x")
+if toLog == int(1):
 
 @click.command()
 # options
