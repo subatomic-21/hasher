@@ -1,3 +1,5 @@
+
+
 import hashlib
 import os
 from colorama import Fore, Back, Style
@@ -6,20 +8,35 @@ import click
 from pyfiglet import Figlet
 
 
+
 os.system('clear')
 
-f = Figlet(font='slant')
-print f.renderText('Hasher')
 
 
-print(" \n")
-
-toHash = raw_input("Press enter to continue.")
-
-print(" \n")
 
 
+
+
+# toLog = int(raw_input("Would you like to enable logging? (Hasher will log hashes to a file controlled on local host machine.) [0] for yes [1] for no "))
+# print("\n")
+
+# if toLog == int(0):
+	# Log = open("hasherLog", "x")
+# if toLog == int(1):
+
+@click.command()
+# options
+# @click.option('--algo', '-a')
 def main():
+	f = Figlet(font='slant')
+	print f.renderText('Hasher')	
+
+	print(" \n")
+
+	toHash = raw_input("Press enter to continue.")
+
+	print(" \n")
+
 
 	print("\n")
 	os.system('clear')
@@ -68,6 +85,10 @@ def main():
 		return main()
 	elif again == ("y"):
 		return main()
+
+
+
+
 
 
 
