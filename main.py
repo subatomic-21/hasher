@@ -6,6 +6,7 @@ import click
 from pyfiglet import Figlet
 
 
+
 os.system('clear')
 
 
@@ -33,7 +34,11 @@ def main():
 	print("\n")
 	os.system('clear')
 
-	CofHash = int(input("Choose algorithm: \n-[1]- sha1 \n-[2]- md5 \n-[3]- sha224 \n-[4]- sha256 \n-[5]- sha384 \n-[6]- sha512 "))
+	f = Figlet(font='slant')
+	print f.renderText('Hasher')
+
+
+	CofHash = int(input("-[1]- sha1 \n-[2]- md5 \n-[3]- sha224 \n-[4]- sha256 \n-[5]- sha384 \n-[6]- sha512 " + "\n" +"\n" +"Choose an algorithm: "))
 	print("\n")
 
 	# Python ask user for input
@@ -76,11 +81,8 @@ def main():
 	if again == ("Y"):
 		return main()
 	elif again == ("y"):
+		os.system('clear')
 		return main()
-
-
-
-
 
 
 
