@@ -1,1 +1,1 @@
-git install .
+pip install .
