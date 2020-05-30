@@ -1,4 +1,4 @@
-pip hashlib
+pip install hashlib
 pip install colorama
 pip install click
 pip install pyfiglet
