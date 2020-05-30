@@ -7,6 +7,6 @@ Must first install python and pip
 
 2 - Build with ``` ./install.sh ``` 
 
-3 - Run ``` python hasher ```
+3 - Run ``` hasher ```
 
 4 - Proceed through options
