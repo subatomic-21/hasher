@@ -1,6 +1,8 @@
 # Hasher
 Hasher is a CLI tool for hashing strings in a secure, disconnected manner. 
 ## Usage
+For MacOS and UNIX systems
+
 Must first install python and pip
 
 1 - Change into hasher directory
