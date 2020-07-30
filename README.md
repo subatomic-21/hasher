@@ -1,5 +1,5 @@
 # Hasher
-Hasher is a CLI tool for hashing strings in a secure, disconnected manner. 
+Hasher is a CLI tool for hashing strings. 
 ## Usage
 For MacOS systems:
 
