@@ -4,6 +4,8 @@ from colorama import Fore, Back, Style
 from time import sleep
 import click
 from pyfiglet import Figlet
+import getpass
+
 
 os.system('clear')
 
@@ -38,7 +40,9 @@ def main():
 
 
 		# Python ask user for input
-		msg = input("Enter text: ")
+		# msg = input("Enter text: ")
+
+		msg = getpass.getpass("Enter text: ")
 
 		print("\n")
 
