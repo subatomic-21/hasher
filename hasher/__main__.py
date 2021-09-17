@@ -12,28 +12,25 @@ os.system('clear')
 # @click.option('--algo', '-a')
 def main():
 	f = Figlet(font='slant')
-	print f.renderText('Hasher')	
-
-	print(" \n")
-
-	toHash = raw_input("Press enter to continue.")
-
-	print(" \n")
+	print(f.renderText('Hasher'))	
+	print(' \n')
+	toHash = input("Press enter to continue.")
+	print(' \n')
 
 	def repeat():
 		
-		print("\n")
+		print('\n')
 		os.system('clear')
 
 		f = Figlet(font='slant')
-		print f.renderText('Hasher')
+		print(f.renderText('Hasher'))
 
 
 		CofHash = int(input("-[1]- sha1 \n-[2]- md5 \n-[3]- sha224 \n-[4]- sha256 \n-[5]- sha384 \n-[6]- sha512 " + "\n" +"\n" +"Choose an algorithm: "))
 		print("\n")
 
 		# Python ask user for input
-		msg = raw_input("Enter text: ")
+		msg = input("Enter text: ")
 
 		print("\n")
 
@@ -41,34 +38,34 @@ def main():
 
 
 		if CofHash == int(1):
-			hsh = hashlib.sha1(msg)
-			hsh.update(msg.encode('utf-8'))
-			print("SHA1 hash: " + Fore.RED + hashlib.sha1(msg).hexdigest())
+			enmsg = msg.encode('utf-8')
+			hsh = hashlib.sha1(enmsg)			
+			print("SHA1 hash: " + Fore.RED + hashlib.sha1(enmsg).hexdigest())
 		elif CofHash == int(2):
-			hsh = hashlib.md5(msg)
-			hsh.update(msg.encode('utf-8'))
-			print("MD5 hash: " + Fore.RED + hashlib.md5(msg).hexdigest())
+			enmsg = msg.encode('utf-8')
+			hsh = hashlib.md5(enmsg)			
+			print("MD5 hash: " + Fore.RED + hashlib.md5(enmsg).hexdigest())
 		elif CofHash == int(3):
-			hsh = hashlib.sha224(msg)
-			hsh.update(msg.encode('utf-8'))
-			print("SHA224 hash: " + Fore.RED + hashlib.sha224(msg).hexdigest())
+			enmsg = msg.encode('utf-8')
+			hsh = hashlib.sha224(enmsg)			
+			print("SHA224 hash: " + Fore.RED + hashlib.sha224(enmsg).hexdigest())
 		elif CofHash == int(4):
-			hsh = hashlib.sha256(msg)
-			hsh.update(msg.encode('utf-8'))
-			print("SHA256 hash: " + Fore.RED + hashlib.sha256(msg).hexdigest())
+			enmsg = msg.encode('utf-8')
+			hsh = hashlib.sha256(enmsg)			
+			print("SHA256 hash: " + Fore.RED + hashlib.sha256(enmsg).hexdigest())
 		elif CofHash == int(5):
-			hsh = hashlib.sha384(msg)
-			hsh.update(msg.encode('utf-8'))
-			print("SHA384 hash: " + Fore.RED + hashlib.sha384(msg).hexdigest())
+			enmsg = msg.encode('utf-8')
+			hsh = hashlib.sha384(enmsg)			
+			print("SHA384 hash: " + Fore.RED + hashlib.sha384(enmsg).hexdigest())
 		elif CofHash == int(6):
-			hsh = hashlib.sha512(msg)
-			hsh.update(msg.encode('utf-8'))
-			print("SHA512 hash: " + Fore.RED + hashlib.sha512(msg).hexdigest())
+			enmsg = msg.encode('utf-8')
+			hsh = hashlib.sha512(enmsg)			
+			print("SHA512 hash: " + Fore.RED + hashlib.sha512(enmsg).hexdigest())
 
-		print Fore.RESET
+		print(Fore.RESET)
 
 		print("\n")
-		again = raw_input("Would you like to hash another string? Yes [Y] or No [N]")
+		again = input("Would you like to hash another string? Yes [Y] or No [N]")
 		if again == ("Y"):
 			return main()
 		elif again == ("y"):
