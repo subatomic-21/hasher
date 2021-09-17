@@ -30,7 +30,7 @@ def main():
 			CofHash = int(input("-[1]- sha1 \n-[2]- md5 \n-[3]- sha224 \n-[4]- sha256 \n-[5]- sha384 \n-[6]- sha512 " + "\n" +"\n" +"Choose an algorithm: "))
 			print("\n")
 		except(ValueError):
-			CofHash = int(input("Please enter a number!"))
+			CofHash = int(input("Please enter a number! \n"))
 
 
 
@@ -41,6 +41,9 @@ def main():
 		msg = input("Enter text: ")
 
 		print("\n")
+
+		os.system('clear')
+		print(f.renderText('Hasher'))
 
 		sleep(1)
 
@@ -73,7 +76,7 @@ def main():
 		print(Fore.RESET)
 
 		print("\n")
-		again = input("Would you like to hash another string? Yes [Y] or No [N]")
+		again = input("Would you like to hash another string? Yes [Y] or No [N] \n")
 		if again == ("Y"):
 			return main()
 		elif again == ("y"):
