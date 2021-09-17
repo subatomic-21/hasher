@@ -26,8 +26,16 @@ def main():
 		print(f.renderText('Hasher'))
 
 
-		CofHash = int(input("-[1]- sha1 \n-[2]- md5 \n-[3]- sha224 \n-[4]- sha256 \n-[5]- sha384 \n-[6]- sha512 " + "\n" +"\n" +"Choose an algorithm: "))
-		print("\n")
+		try:
+			CofHash = int(input("-[1]- sha1 \n-[2]- md5 \n-[3]- sha224 \n-[4]- sha256 \n-[5]- sha384 \n-[6]- sha512 " + "\n" +"\n" +"Choose an algorithm: "))
+			print("\n")
+		except(ValueError):
+			CofHash = int(input("Please enter a number!"))
+
+
+
+		
+
 
 		# Python ask user for input
 		msg = input("Enter text: ")
