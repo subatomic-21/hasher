@@ -27,20 +27,66 @@ def main():
 		f = Figlet(font='slant')
 		print(f.renderText('Hasher'))
 
+		def choices():
+			print("-[1]- sha1 \n-[2]- md5 \n-[3]- sha224 \n-[4]- sha256 \n-[5]- sha384 \n-[6]- sha512 " + "\n" +"\n")
+
+		choices()
+
+		def error():
+
+			try:
+				global CofHash
+				CofHash = int(input("\nChoose an algorithm: "))
+				print("\n")
+			except(ValueError):
+				print("\nPlease enter a number! \n")
+
+				sleep(1)
+				
+				# CofHash = int(input("Choose an algorithm: "))
+				try:
+					int(input("Choose an algorithm: "))
+				except(ValueError):
+					os.system('clear')
+					print(f.renderText('Hasher'))
+					choices()
+					error()
+
+
 
 		try:
-			CofHash = int(input("-[1]- sha1 \n-[2]- md5 \n-[3]- sha224 \n-[4]- sha256 \n-[5]- sha384 \n-[6]- sha512 " + "\n" +"\n" +"Choose an algorithm: "))
-			print("\n")
+			error()
 		except(ValueError):
-			CofHash = int(input("Please enter a number! \n"))
+			error()
 
-
-
-		
 
 
 		# Python ask user for input
 		# msg = input("Enter text: ")
+		os.system('clear')
+		print(f.renderText('Hasher'))
+
+		# algo tag
+		def tag():
+			if CofHash == 1:
+				print(Back.RED + Fore.Black + "sha1")
+			elif CofHash == 2:
+				print(Back.RED + Fore.BLACK + "md5")
+			elif CofHash == 3:
+				print(Back.RED + Fore.BLACK + "sha224")
+			elif CofHash == 4:
+				print(Back.RED + Fore.BLACK + "sha256")
+			elif CofHash == 5:
+				print(Back.RED + Fore.BLACK + "sha384")
+			elif CofHash == 6:
+				print(Back.RED + Fore.BLACK + "sha512")
+
+
+		tag()
+
+		print(Fore.RESET + Back.RESET)
+
+
 
 		msg = getpass.getpass("Enter text: ")
 
