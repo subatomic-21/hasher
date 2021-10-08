@@ -69,7 +69,7 @@ def main():
 		# algo tag
 		def tag():
 			if CofHash == 1:
-				print(Back.RED + Fore.Black + "sha1")
+				print(Back.RED + Fore.BLACK + "sha1")
 			elif CofHash == 2:
 				print(Back.RED + Fore.BLACK + "md5")
 			elif CofHash == 3:
